@@ -19,7 +19,8 @@ Pod::Spec.new do |s|
   s.osx.platform      = :osx, '10.13'
   s.requires_arc = true
 
-  s.source_files = "Code/Production/**/*.{h,m}"
+  s.osx.source_files = "Code/Production/**/*.{h,m}"
+  s.ios.source_files = "Code/Production/**/*.{h,m}"
 
   s.subspec 'AssemblyCollector' do |subspec|
     subspec.source_files = "Code/Production/AssemblyCollector.h", "Code/Production/AssemblyCollector/*.{h,m}"
