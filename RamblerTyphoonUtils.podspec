@@ -15,12 +15,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/rambler-digital-solutions/RamblerTyphoonUtils.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/rambler_ios'
 
-  s.ios.platform      = :ios, '7.0'
-  s.osx.platform      = :osx, '10.13'
+  s.platforms         = { :ios => '7.0', :osx => '10.13'}
   s.requires_arc = true
 
-  s.osx.source_files = "Code/Production/**/*.{h,m}"
-  s.ios.source_files = "Code/Production/**/*.{h,m}"
+  s.source_files = "Code/Production/**/*.{h,m}"
 
   s.subspec 'AssemblyCollector' do |subspec|
     subspec.source_files = "Code/Production/AssemblyCollector.h", "Code/Production/AssemblyCollector/*.{h,m}"
